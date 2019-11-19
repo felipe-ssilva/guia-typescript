@@ -2,7 +2,7 @@
 📚 Um livro básico sobre TypeScript
 
 ### Índice
-- Instalação e uso
+- [Instalação](./book/instalacao.md)
 - Configuração
 - Utilizando let e const
 - Importação e exportação
