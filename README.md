@@ -20,9 +20,9 @@
 - Tipos de União
 - Tipos de Intersecção
 - Tipando o valor de “this”
-- Tipos Mapeados em TS 2.1+
+- Tipos Mapeados em TS
 - Tipos “Mapped”, “Partial”, “Readonly”, “Record” e “Pick” em TS
-- Tipos Condicionais em TS 2.8+
+- Tipos Condicionais em TS
 - Guardas de Tipo
 - Classes
 - Mixins e Herança múltipla
