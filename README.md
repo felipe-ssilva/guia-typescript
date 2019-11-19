@@ -3,8 +3,8 @@
 
 ### Índice
 - [Instalação](./book/instalacao.md)
-- Inferencia de Tipo
-- Compatibilidade de Tipo
+- [Tipos](./book/tipos.md)
+- Interfaces
 - Classes
 - Generics
 - Módulos
