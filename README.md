@@ -1,4 +1,4 @@
-# livro-typescript
+# livro-typescript - EM CONSTRUÇÃO!
 📚 Um livro básico sobre TypeScript
 
 ### Índice
