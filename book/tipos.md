@@ -28,8 +28,8 @@ any, array, enum, tuple, number, string, boolean, void (isto é null ou undefine
   
 ### Complexos
 
-*Array
-  *O array é um tipo muito utilizado em JavaScript. E em TypeSript você pode declará-la de duas maneiras.
+* Array
+  * O array é um tipo muito utilizado em JavaScript. E em TypeSript você pode declará-la de duas maneiras.
   A primeira é utilizando o tipo do elemento seguido por [] (colchetes).
   ```
   let arr: string[] = ['Maça', 'Uva', 'Melancia', 'Amora'];
@@ -39,8 +39,8 @@ any, array, enum, tuple, number, string, boolean, void (isto é null ou undefine
   let arrGeneric: Array<string> = ['Maça', 'Uva', 'Melancia', 'Amora'];
   ```
 
-*Tuple(Tupla)
-  *Os tipos de tupla permitem que você expresse um array onde o tipo e um número fixo de elementos é conhecido, mas não precisa ser o mesmo.
+* Tuple(Tupla)
+  * Os tipos de tupla permitem que você expresse um array onde o tipo e um número fixo de elementos é conhecido, mas não precisa ser o mesmo.
   ```
   let tuple: [string, number, string, number];
   tuple = ['hello', 1, 'world', 2];
@@ -48,15 +48,15 @@ any, array, enum, tuple, number, string, boolean, void (isto é null ou undefine
   console.log(tuple[0]);
   console.log(tuple[1]);
   ```
-  *No exemplo acima temos um número definido de elementos na array (4), e ele são: duas strings e dois números.
+  * No exemplo acima temos um número definido de elementos na array (4), e ele são: duas strings e dois números.
   Se definirmos a tupla alterando as ordens que os tipos foram de declarados mais uma vez o Visual Studio indicará um erro;
   Exemplo:
   ```
   tuple = [1, 'hello', 2, 'world'];
   ```
   
-*Enum
-  *Enum é um tipo de dados que não existe no JavaScript mas foi adicionado ao TypScript com o intuito de fornecer nomes mais amigáveis a conjuntos de valores numéricos. Enums são muito comuns em linguagens como Java e C#.
+* Enum
+  * Enum é um tipo de dados que não existe no JavaScript mas foi adicionado ao TypScript com o intuito de fornecer nomes mais amigáveis a conjuntos de valores numéricos. Enums são muito comuns em linguagens como Java e C#.
   ```
   enum Color {Red, Green, Blue, Yellow};
   enum AnotherColor {Red = 1, Green = 2, Blue = 4, Yellow};
