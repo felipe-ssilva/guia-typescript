@@ -1,5 +1,5 @@
-# livro-typescript - EM CONSTRUÇÃO!
-📚 Um livro básico sobre TypeScript
+# guia-typescript - EM CONSTRUÇÃO!
+📚 Um guia básico sobre TypeScript
 
 ### Índice
 - [Instalação](./book/instalacao.md)
