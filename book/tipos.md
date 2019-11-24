@@ -65,7 +65,7 @@ any, array, enum, tuple, number, string, boolean, void (isto é null ou undefine
   Assim como se imprimirmos o enum AnotherColor, Green será 1, Red 2, Yellow 5 e Blue que não foi atribuído valor será 6.
 
 ### Especiais
-  * Os tipos de dados especiais são: any e void.
+  Os tipos de dados especiais são: any e void.
   
   * Any
     * Any é um tipo de dados muito utilizado para quem está recebendo dados de uma API/biblioteca e não sabe seu valor.
