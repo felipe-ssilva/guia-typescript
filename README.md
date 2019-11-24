@@ -4,7 +4,7 @@
 ### Índice
 - [Instalação](./book/instalacao.md)
 - [Tipos](./book/tipos.md)
-- Interfaces
+- [Interfaces](./book/interfaces.md)
 - Classes
 - Generics
 - Módulos
