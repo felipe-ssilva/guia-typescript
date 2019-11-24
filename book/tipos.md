@@ -58,8 +58,32 @@ any, array, enum, tuple, number, string, boolean, void (isto é null ou undefine
 * Enum
   * Enum é um tipo de dados que não existe no JavaScript mas foi adicionado ao TypScript com o intuito de fornecer nomes mais amigáveis a conjuntos de valores numéricos. Enums são muito comuns em linguagens como Java e C#.
   ```
-  enum Color {Red, Green, Blue, Yellow};
-  enum AnotherColor {Red = 1, Green = 2, Blue = 4, Yellow};
+  enum Color {Green, Red, Yellow, Blue};
+  enum AnotherColor {Green = 1, Red = 2, Yellow = 5, Blue};
   ```
-  Se imprimirmos o enum Color, veremos que os valores de Red será 0, Green será 1, Blue 2 e Yellow será 3.
-  Assim como se imprimirmos o enum AnotherColor, Red será 1, Green 2, Blue 4 e Yellow que não foi atribuído valor será 5.
+  Se imprimirmos o enum Color, observe que os valores de Green será 0, Red será 1, Yellow 2 e Blue será 3.
+  Assim como se imprimirmos o enum AnotherColor, Green será 1, Red 2, Yellow 5 e Blue que não foi atribuído valor será 6.
+
+### Especiais
+  * Os tipos de dados especiais são: any e void.
+  
+  * Any
+    * Any é um tipo de dados muito utilizado para quem está recebendo dados de uma API/biblioteca e não sabe seu valor.
+      Declarando uma variável como o tipo any, podemos atribuir qualquer valor para a mesma.
+      ```
+      let qualquer: any;
+      qualquer = 2;
+      qualquer = true;
+      qualquer = 'String';
+      ```
+      
+  * Void
+    * O tipo void costuma ser usado em funções, serve para dizer que o valor é vazio.
+      Veja exemplo: 
+      ```
+      function msg(text: string ): void {
+        console.log(`Função sem retorno: ${text}`);
+      }
+
+      print('Meu texto legal!');
+      ```
