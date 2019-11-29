@@ -63,27 +63,65 @@ any, array, enum, tuple, number, string, boolean, void (isto é null ou undefine
   ```
   Se imprimirmos o enum Color, observe que os valores de Green será 0, Red será 1, Yellow 2 e Blue será 3.
   Assim como se imprimirmos o enum AnotherColor, Green será 1, Red 2, Yellow 5 e Blue que não foi atribuído valor será 6.
-
-### Especiais
-  Os tipos de dados especiais são: any e void.
   
-  * Any
-    * Any é um tipo de dados muito utilizado para quem está recebendo dados de uma API/biblioteca e não sabe seu valor.
-      Declarando uma variável como o tipo any, podemos atribuir qualquer valor para a mesma.
-      ```
-      let qualquer: any;
-      qualquer = 2;
-      qualquer = true;
-      qualquer = 'String';
-      ```
+* Any
+  * Any é um tipo de dados muito utilizado para quem está recebendo dados de uma API/biblioteca e não sabe seu valor.
+    Declarando uma variável como o tipo any, podemos atribuir qualquer valor para a mesma.
+    ```
+    let qualquer: any;
+    qualquer = 2;
+    qualquer = true;
+    qualquer = 'String';
+    ```
       
-  * Void
-    * O tipo void costuma ser usado em funções, serve para dizer que o valor é vazio.
-      Veja exemplo: 
-      ```
-      function msg(text: string ): void {
-        console.log(`Função sem retorno: ${text}`);
-      }
+* Void
+  * O tipo void costuma ser usado em funções, serve para dizer que o valor é vazio.
+    Veja exemplo: 
+    ```
+    function msg(text: string ): void {
+      console.log(`Função sem retorno: ${text}`);
+    }
 
-      print('Meu texto legal!');
-      ```
+    print('Meu texto legal!');
+    ```
+
+* Null e Undefined
+  * No TypeScript, **Null** e **Undefined**, têm seus próprios tipos denominados indefinido e nulo, respectivamente.
+    Assim como o **Void**, eles não são extremamente úteis por conta própria:
+    Veja exemplo: 
+    ```
+    let u: undefined = undefined;
+    let n: null = null;
+    ```
+    Por padrão, **Null** e **Undefined** são subtipos de todos os outros tipos. Isso significa que você pode atribuir nulo e indefinido     a algo como Number.
+    
+    No entanto, ao usar o sinalizador ***--strictNullChecks***, **Null** e **Undefined** são apenas atribuíveis a qualquer um e seus
+    respectivos tipos (a única exceção é que o Undefined também é atribuível a Null). Isso ajuda a evitar muitos erros comuns. Nos casos
+    em que você deseja passar uma **String** ou **Null** ou **Undefined**, você pode usar o tipo de união **string | null | undefined**.
+
+* Never
+  * O tipo **Never** representa o tipo de valores que nunca ocorrem. Por exemplo, **Never** é o tipo de retorno para uma _function_ ou
+    _arrow function_ que sempre gera uma exceção ou uma que nunca retorna; As variáveis também adquirem o tipo **Never** quando
+    estreitadas por nenhum tipo de proteção que nunca possa ser verdadeira.
+  
+    O tipo **Never** é um subtipo de e pode ser atribuído a todo tipo; no entanto, nenhum tipo é um subtipo de, ou pode ser atribuído a,
+    **Never** (exceto a si próprio). Mesmo o **Any** não é atribuível ao **Never**.
+  
+    Alguns exemplos de funções retornando **Never**:
+    ```
+    // O retorno da função never deve ter um ponto final inacessível
+    function error(message: string): never {
+        throw new Error(message);
+    }
+
+    // Tipo de retorno never
+    function fail() {
+        return error("Something failed");
+    }
+
+    //  O retorno da função never deve ter um ponto final inacessível
+    function infiniteLoop(): never {
+        while (true) {
+        }
+    }
+    ```
